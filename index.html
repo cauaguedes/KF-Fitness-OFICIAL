@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111111">
+  <title>KF FITNESS — A força está em você</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Barra de Anúncio Superior -->
+  <div class="announcement">
+    ENVIO PARA TODO O BRASIL <span>✦</span> PAGAMENTO SEGURO <span>✦</span> IDENTIDADE KF
+  </div>
+
+  <!-- Cabeçalho / Navegação -->
+  <header class="header">
+    <a class="brand" href="#inicio">
+      <span class="brand-mark">♛</span>
+      <span><b>KF</b><small>FITNESS</small></span>
+    </a>
+    <nav>
+      <a href="#inicio">Início</a>
+      <a href="#colecao">Coleção</a>
+      <a href="#sobre">A marca</a>
+    </nav>
+    <div class="head-actions">
+      <button class="icon-btn" id="accountBtn" aria-label="Minha conta">♙ <span>Entrar</span></button>
+      <button class="cart-btn" id="cartBtn">Sacola <b id="cartCount">0</b></button>
+      <button class="menu-btn" id="menuBtn">☰</button>
+    </div>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main>
+    <!-- Seção Hero / Destaque -->
+    <section class="hero" id="inicio">
+      <div class="hero-shade"></div>
+      <div class="hero-copy">
+        <p class="eyebrow">PERFORMANCE • ESTILO • ATITUDE</p>
+        <h1>A FORÇA<br>ESTÁ EM <em>VOCÊ.</em></h1>
+        <p>Vista sua determinação. Descubra peças feitas para acompanhar cada conquista.</p>
+        <a class="gold-btn" href="#colecao">EXPLORAR COLEÇÃO <span>↗</span></a>
+      </div>
+      <div class="hero-stamp">
+        <span>♛</span><b>KF</b><small>FITNESS</small>
+      </div>
+      <div class="hero-bottom">
+        TREINE FORTE. VIVA KF. <span>01 / 03</span>
+      </div>
+    </section>
+
+    <!-- Benefícios -->
+    <section class="benefits">
+      <div><b>✦</b><span>ESTILO QUE IMPULSIONA</span></div>
+      <div><b>◈</b><span>CONFORTO EM MOVIMENTO</span></div>
+      <div><b>↗</b><span>ENVIO PARA TODO O BRASIL</span></div>
+      <div><b>♧</b><span>COMPRA SEGURA</span></div>
+    </section>
+
+    <!-- Seção de Coleção e Produtos -->
+    <section class="collection section" id="colecao">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">ESCOLHA SUA PRÓXIMA CONQUISTA</p>
+          <h2>COLEÇÃO <em>KF</em></h2>
+        </div>
+        <div class="filters" id="filters">
+          <button class="filter active" data-category="Todos">Todos</button>
+          <button class="filter" data-category="Masculino">Masculino</button>
+          <button class="filter" data-category="Feminino">Feminino</button>
+          <button class="filter" data-category="Infantil">Infantil</button>
+          <button class="filter" data-category="Acessórios">Acessórios</button>
+        </div>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <!-- Seção Manifesto / Sobre -->
+    <section class="manifesto" id="sobre">
+      <div class="manifesto-logo">
+        ♛<strong>KF</strong><small>FITNESS</small>
+      </div>
+      <div>
+        <p class="eyebrow">MAIS QUE ROUPA. UMA POSTURA.</p>
+        <h2>SUA FORÇA.<br><em>SUA IDENTIDADE.</em></h2>
+        <p>A KF FITNESS nasceu para quem transforma disciplina em atitude. Do primeiro movimento à próxima grande conquista, vista sua melhor versão.</p>
+        <a class="text-link" href="#colecao">ENCONTRE SEU ESTILO ↗</a>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+      <p class="eyebrow">ENTRE PARA O UNIVERSO KF</p>
+      <h2>RECEBA AS NOVIDADES.</h2>
+      <form id="newsletterForm">
+        <input type="email" placeholder="Seu melhor e-mail" required>
+        <button class="gold-btn">QUERO RECEBER ↗</button>
+      </form>
+      <small>Ao se cadastrar, você concorda em receber novidades da KF FITNESS.</small>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer>
+    <a class="brand" href="#inicio">
+      <span class="brand-mark">♛</span>
+      <span><b>KF</b><small>FITNESS</small></span>
+    </a>
+    <p>A FORÇA ESTÁ EM VOCÊ. A IDENTIDADE É KF.</p>
+    <div>
+      <a href="https://www.instagram.com/kffitness.oficial/" target="_blank" rel="noreferrer">Instagram</a>
+      <a href="https://wa.me/556195706241" target="_blank" rel="noreferrer">WhatsApp</a>
+    </div>
+    <small>© 2026 KF FITNESS. Todos os direitos reservados.</small>
+  </footer>
+
+  <!-- Elementos Flutuantes / Modais / Gavetas -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Gaveta do Carrinho -->
+  <aside class="drawer" id="cartDrawer">
+    <div class="drawer-head">
+      <h3>SUA SACOLA</h3>
+      <button class="close" data-close>×</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-summary">
+      <div>
+        <span>Subtotal</span>
+        <b id="cartTotal">R$ 0,00</b>
+      </div>
+      <small>Frete calculado na finalização do pedido.</small>
+      <button class="gold-btn full" id="checkoutBtn">CONTINUAR COMPRA ↗</button>
+    </div>
+  </aside>
+
+  <!-- Modal de Conta / Login -->
+  <div class="modal" id="accountModal">
+    <button class="close modal-close" data-close>×</button>
+    <div class="modal-brand">♛ <b>KF FITNESS</b></div>
+    <p class="eyebrow">BEM-VINDO AO UNIVERSO KF</p>
+    <h2 id="authTitle">MINHA CONTA</h2>
+    <div class="tabs">
+      <button class="tab active" data-tab="login">Entrar</button>
+      <button class="tab" data-tab="register">Criar conta</button>
+      <button class="tab" data-tab="admin">Criador</button>
+    </div>
+    <form id="authForm">
+      <label id="nameWrap" class="hidden">Nome completo
+        <input id="authName" autocomplete="name">
+      </label>
+      <label>E-mail
+        <input id="authEmail" type="email" required autocomplete="email">
+      </label>
+      <label>Senha
+        <input id="authPassword" type="password" required minlength="6" autocomplete="current-password">
+      </label>
+      <button class="gold-btn full" id="authSubmit">ENTRAR ↗</button>
+    </form>
+    <p class="demo-note" id="authNote">Acesso de demonstração: crie uma conta para testar a experiência do cliente.</p>
+    <p class="auth-message" id="authMessage"></p>
+  </div>
+
+  <!-- Modal do Administrador -->
+  <div class="modal wide hidden" id="adminModal">
+    <button class="close modal-close" data-close>×</button>
+    <div class="admin-top">
+      <div>
+        <p class="eyebrow">ÁREA RESTRITA</p>
+        <h2>PAINEL DO <em>CRIADOR</em></h2>
+      </div>
+      <button class="outline-btn" id="logoutBtn">Sair</button>
+    </div>
+    <div class="admin-stats">
+      <div><small>PRODUTOS</small><b id="statProducts">0</b></div>
+      <div><small>ITENS NA SACOLA (DEMO)</small><b id="statCart">0</b></div>
+      <div><small>VALOR EM SACOLAS (DEMO)</small><b id="statRevenue">R$ 0</b></div>
+    </div>
+    <div class="admin-tabs">
+      <button class="active" data-admin-tab="products">Produtos</button>
+      <button data-admin-tab="orders">Pedidos</button>
+      <button data-admin-tab="settings">Configurações</button>
+    </div>
+    <div id="adminProducts">
+      <div class="admin-form-head">
+        <h3>GERENCIAR PRODUTOS</h3>
+        <button class="gold-btn" id="newProductBtn">+ NOVO PRODUTO</button>
+      </div>
+      <form id="productForm" class="product-form hidden">
+        <input type="hidden" id="editId">
+        <label>Nome<input id="pName" required placeholder="Ex.: Camiseta KF Performance"></label>
+        <label>Categoria
+          <select id="pCategory">
+            <option>Masculino</option>
+            <option>Feminino</option>
+            <option>Infantil</option>
+            <option>Acessórios</option>
+          </select>
+        </label>
+        <label>Preço (R$)<input id="pPrice" type="number" min="0.01" step="0.01" required></label>
+        <label>Imagem (URL)<input id="pImage" placeholder="https://..." required></label>
+        <label>Descrição<input id="pDescription" placeholder="Detalhes do produto"></label>
+        <label>Tamanhos<input id="pSizes" placeholder="P, M, G, GG"></label>
+        <div class="form-actions">
+          <button class="gold-btn">SALVAR PRODUTO</button>
+          <button type="button" class="outline-btn" id="cancelProduct">Cancelar</button>
+        </div>
+      </form>
+      <div class="admin-product-list" id="adminProductList"></div>
+    </div>
+    <div id="adminOrders" class="hidden">
+      <h3>PEDIDOS</h3>
+      <p class="muted">Os pedidos reais serão exibidos após conectar Firebase e o provedor de pagamento. Nesta versão demonstrativa, nenhuma cobrança ou pedido real é criado.</p>
+    </div>
+    <div id="adminSettings" class="hidden">
+      <h3>CONFIGURAÇÕES DA LOJA</h3>
+      <p class="muted">Pagamentos planejados: Pix e cartão via Mercado Pago. Entregas: Correios, entrega local e retirada. A integração exige credenciais privadas no servidor.</p>
+      <a class="text-link" href="README.md" target="_blank">VER GUIA DE CONFIGURAÇÃO ↗</a>
+    </div>
+  </div>
+
+  <!-- Toast de Notificações -->
+  <div class="toast" id="toast"></div>
+
+  <!-- Script Principal -->
+  <script src="app.js"></script>
+</body>
+</html>
